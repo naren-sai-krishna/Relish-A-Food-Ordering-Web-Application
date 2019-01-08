@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CHINESE CUISINE CARD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body, html{
+ height: 100%;
+  margin: 0 auto;
+  background-color: black;
+  font-family: 'Flamenco', cursive;
+}
+th{
+  text-transform: uppercase;
+}
+button:focus {outline:0;}
+.btn {
+  border-radius: 12px;
+  background-color: purple;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: -.8% auto;
+  position: absolute;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.btn:hover {opacity: 0.6}
+
+h1{
+size:300%;
+text-align:center;
+color: red;
+}
+
+h2{
+font-size:200%;
+color:yellow;
+font-family:Courier New;
+font-style: italic;
+
+}
+h3{
+font-size:130%;
+text-align:left;
+color:gold;
+font-family:verdana;
+font-variant: small-caps;
+}
+.bg {
+  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("images/china.jpg");
+
+  height: 150%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container{
+ position: relative;
+ font-family: Arial;
+}
+
+
+.text-block{
+  position: absolute;
+   top: 30px;
+   left: 76px;
+  background-color: none;
+  color: white;
+  padding-left: 30px;
+  padding-right: 40px;
+  size:400%;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width:170%;
+}
+
+ td,th {
+  border: none;
+  text-align: left;
+  padding: 10px;
+  size:100%
+}
+.head1{
+font-size:22px;
+color:tomato;
+}
+.head2{
+ text-align:center;
+color:blue;
+}
+tr:nth-child(even) {background-color: #f2f2f2;color: black}
+tr:hover {
+          background-color: green;
+          opacity: 0.9;
+        }
+</style>
+</head>
+<body>
+    <script>
+        function goBack() {
+                window.history.back();
+            } 
+        
+        
+        </script>
+    <button class="btn" onclick="goBack()">Back</button>
+  <div class="head2">
+<h1>CHINESE CUISINE</h1>
+</div>
+<div class="bg">
+<div class="container">
+<div class="text-block">
+
+<h2 style="text-align:center;"></h2>
+
+<h3>SOUP</h3>
+<table>
+  <tr class="head1">
+    <th>Cuisine</th>
+    <th>Price(Rs)</th>
+    <th>Quantity</th>
+  </tr>
+  <tr>
+    <td>Chicken Noodle Soup</td>
+    <td>90</td>
+    <td><input type="number" name="quantity"></td>
+  </tr>
+  
+  <tr>
+    <td>Chicken Rice Soup</td>
+    <td>100</td>
+    <td><input type="number" name="quantity"></td>
+  </tr>
+  
+  <tr>
+    <td>Vegetable Soup</td>
+    <td>85</td>
+    <td><input type="number" name="quantity"></td>
+  </tr>
+ <tr>
+    <td>Hot & Sour Soup</td>
+    <td>110</td>
+    <td><input type="number" name="quantity"></td>
+  </tr>
+</table>
+<br>
+
+<h3>CHOWMEIN</h3>
+<table>
+  <tr class="head1">
+    <th>Cuisine</th>
+    <th>Price(Rs)</th>
+  </tr>
+  <tr>
+    <td>Veg Chowmein</td>
+    <td>200</td>
+    <td><input type="number" name="quantity"></td>
+  </tr>
+  
+  <tr>
+    <td>Chicken Chowmein</td>
+    <td>170</td>
+    <td><input type="number" name="quantity"></td>
+  </tr>
+  
+  <tr>
+    <td>Shrimp Chowmein</td>
+    <td>195</td>
+    <td><input type="number" name="quantity"></td>
+  </tr>
+  
+</table>
+<br>
+
+
+<h3>NOODLES</h3>
+<table>
+  <tr class="head1">
+    <th>Cuisine</th>
+    <th>Price(Rs)</th>
+  </tr>
+  <tr>
+    <td>Chicken Noodles.</td>
+    <td>95</td>
+    <td><input type="number" name="quantity"></td>
+  </tr>
+  
+  <tr>
+    <td>Veg Noodles</td>
+    <td>75</td>
+    <td><input type="number" name="quantity"></td>
+  </tr>
+  
+  <tr>
+    <td>Egg Noodles</td>
+    <td>85</td>
+    <td><input type="number" name="quantity"></td>
+  </tr>
+</table>
+<br>
+<button class="btn" style="float: right" onclick="">OK</button>
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+

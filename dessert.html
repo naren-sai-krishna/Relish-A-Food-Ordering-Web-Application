@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DESSERTS CUISINE CARD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Flamenco" rel="stylesheet">
+<style>
+
+body, html{
+ height: 100%;
+  margin: 0;
+  color:white;
+  background-color: black;
+  font-family: 'Flamenco', cursive;
+}
+button:focus {outline:0;}
+.btn {
+  
+  border-radius: 12px;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: -.8% auto;
+  position: absolute;
+  opacity: 1;
+  transition: 0.3s;
+  background-color: purple;
+}
+
+.btn:hover {opacity: 0.6}
+h1{
+size:300%;
+text-align:center;
+color: red;
+}
+
+h2{
+font-size:200%;
+color:yellow;
+font-family:Courier New;
+font-style: italic;
+
+}
+h3{
+font-size:130%;
+text-align:left;
+color:gold;
+font-family:verdana;
+font-variant: small-caps;
+}
+.bg {
+  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("images/dessert1.jpg");
+  opacity: 0.9;
+  height: 160%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container{
+ position: relative;
+ font-family: Arial;
+}
+
+
+.text-block{
+  position: absolute;
+   top: 30px;
+   left: 76px;
+  background-color: none;
+  color: white;
+  padding-left: 30px;
+  padding-right: 40px;
+  size:400%;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width:170%;
+}
+
+ td,th {
+  border: none;
+  text-align: left;
+  padding: 10px;
+  size:100%
+}
+.head1{
+font-size:22px;
+color:blue;
+}
+.head2{
+ text-align:center;
+color:blue;
+}
+
+.head3{
+
+color:black;
+}
+tr:nth-child(even) {background-color: #f2f2f2;color: black}
+tr:nth-child(odd) {color: white}
+tr:hover {
+          background-color: green;
+          opacity: 0.9;
+        }
+</style>
+</head>
+<script>
+    function goBack() {
+            window.history.back();
+        } 
+    
+    
+    </script>
+<button class="btn" onclick="goBack()">Back</button>
+
+  <div class="head2">
+<h1 >DESSERTS</h1>
+</div>
+<div class="bg">
+<div class="container">
+<div class="text-block">
+
+<h2 style="text-align:center;"></h2>
+
+
+<table>
+  <tr class="head1">
+    <th>CUISINE</th>
+    <th>PRICE(Rs)</th>
+    <th>QUANTITY</th>
+  </tr>
+  
+  <tr class="head3">
+    <td>Fruit Platter</td>
+    <td>250</td>
+    <td><input type="number" name="quantity"></td>
+  </tr>
+  
+  <tr class="head3">
+    <td>Mango Jubilee</td>
+    <td>150</td>
+    <td><input type="number" name="quantity1"></td>
+  </tr>
+  
+  <tr class="head3">
+    <td>Ice Cream</td>
+    <td>90</td>
+    <td><input type="number" name="quantity"></td>
+  </tr>
+ <tr class="head3">
+    <td>Fried Ice Cream</td>
+    <td>125</td>
+    <td><input type="number" name="quantity"></td>
+  </tr>
+  
+  <tr class="head3">
+    <td>Banana split</td>
+    <td>180</td>
+    <td><input type="number" name="quantity"></td>
+  </tr>
+  
+  <tr class="head3">
+    <td>Panna Cotta</td>
+    <td>95</td>
+    <td><input type="number" name="quantity"></td>
+  </tr>
+  
+  <tr class="head3">
+    <td>Ice Box Cake</td>
+    <td>80</td>
+    <td><input type="number" name="quantity"></td>
+  </tr>
+
+  <tr class="head3">
+    <td>Coast Lime Pie</td>
+    <td>250</td>
+    <td><input type="number" name="quantity"></td>
+  </tr>
+  
+  <tr class="head3">
+    <td>Chocolate Cake</td>
+    <td>220</td>
+    <td><input type="number" name="quantity"></td>
+    
+  </tr>
+  
+
+</table>
+
+<br>
+<button class="btn" style="float: right" onclick="">OK</button>
+
+
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+</body>
+</html>
+
+
