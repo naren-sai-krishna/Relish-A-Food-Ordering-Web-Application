@@ -7,8 +7,10 @@ There are different components in the application: User Account, Menu Card, Deta
 3) <b>User Account:</b> A user can place order only after logging into his Relish application account.   
 4) <b>Table Reservation:</b> Customer can know the availability of space, select from the available seating having different outdoor views.
 Payment: When the customer chooses what they want to eat, they choose the payment mode:   
-a) Debit Card                                                                      b) Credit Card  
-c) Net banking                                                                    d) Cash on delivery      
+a) Debit Card                                                                        
+b) Credit Card    
+c) Net banking                                                                      
+d) Cash on delivery        
 5) <b>Coupon Code:</b> The customer can enter coupon code they received through their account for discounts. The coupon codes may be specific to customers, based on how frequently they order.    
 6) <b>Rating:</b> The application allows customers to rate the food delivery experience for the different categories: Taste, Quality, Value for money, Delay of delivery. The user may also give suggestions for the benefit of the restaurant.  
 Hence the application is beneficial to the customer and also promotes the food business of Relish.
