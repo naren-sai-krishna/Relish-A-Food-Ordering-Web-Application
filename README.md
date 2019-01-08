@@ -1,4 +1,5 @@
 # Relish-A-Food-Ordering-Web-Application  
+![image](https://user-images.githubusercontent.com/39124232/50850858-23a21d00-13a1-11e9-9e8c-79dce29d1d17.png)
 # <u>Abstract</u>
 The application is about the online food ordering and table reservation mechanism of the restaurant "Relish, A Foodie's Paradise". The application is user-friendly and allows the user to order food by sitting relaxed at their home. It also allows them to reserve their favorite table in the restaurant, which cuts down waiting time. This application thereby improves the revenue of the restaurant since the customer finds this way easy to satisfy their food cravings.
 There are different components in the application: User Account, Menu Card, Details, Table Reservation.
