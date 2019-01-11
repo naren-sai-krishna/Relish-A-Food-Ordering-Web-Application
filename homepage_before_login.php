@@ -60,12 +60,11 @@ require('php/login.php');
                 width: auto;
                 float: left;
                 margin-top: 20px;
-                transition: 50s ;
+                transition: 10s linear;
+                
                 
             }
-            .Logo:hover{
-                transform:rotate(10000deg);
-            }
+            
             .main-nav{
                 float: right;
                 margin-right:2%;
@@ -550,14 +549,14 @@ display:flex;
   }
 }
 function myFunction1() {
-  var y = document.getElementById("spass");
+  var y = document.getElementById("pass");
   if (y.type === "password") {
     y.type = "text";
   } else {
     y.type = "password";
   }
 }
-            function Validate() {
+function Validate() {
         var password = document.getElementById("pass").value;
         var confirmPassword = document.getElementById("repass").value;
         if (password != confirmPassword) {
@@ -565,7 +564,7 @@ function myFunction1() {
             return false;
         }
         return true;
-    }
+}
    
   
 
@@ -577,6 +576,11 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+}
+function Func(){
+    Logo= document.getElementById('Logo');
+    Logo.style.transform="rotate(360deg)";
+    
 }
 
 // Get the modal
@@ -610,7 +614,7 @@ window.onclick = function(event) {
         <header>
             <nav >
                 <div class="row clearfix" >
-                    <img src="images/Logo.png" class="Logo" alt="LOGO" >
+                    <img onload="Func()" src="images/Logo.png" id="Logo" class="Logo" alt="LOGO" >
                     <pre>
                     <h1  id="error" style="font-size:150%;font-family: 'Pacifico', cursive;text-transform: capitalize;" class="dive color-change animate slide">&nbsp;"Food <span>tastes</span> better <span>when </span>
                     <span>you</span> eat with your <span>family !</span>"🍔</pre>
@@ -664,8 +668,8 @@ class="close" title="Close Modal">&times;</span>
             <br><input type="text" placeholder="Enter Last Name" name="slastname" pattern="[A-Za-z ]{1,30}" title="Less than 30 alphabets only" style="width:350px" required>
             <br><input type="text" placeholder="Enter Phone Number" pattern="[6789][0-9]{9}" title="Enter a valid phone number: 9876543210" name="sphone" style="width:350px"required>
             <br><input type="text" placeholder="Enter Email ID" name="semail" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" title="Enter a Valid Email ID" style="width:350px"required>
-            <br><input type="password" placeholder="Enter Password:" id="spass" name="spass" id="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" style="width:350px" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>&nbsp;<span onclick="myFunction1()"class="show-password" style="padding: 10px;margin-right:10%;z-index:2"><img src="images/eye.png" alt="Show password" style="width:6%;height:3%;"></span>
-            <br><input type="password" placeholder="Re-Type Password" name="srepass" id="repass" style="width:350px" required>
+            <br><input type="password" placeholder="Enter Password:" id="pass" name="spass" id="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" style="width:350px" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>&nbsp;<span onclick="myFunction1()"class="show-password" style="padding: 10px;margin-right:10%;z-index:2"><img src="images/eye.png" alt="Show password" style="width:6%;height:3%;"></span>
+            <br><input type="password" placeholder="Re-Type Password" name="srepass" id="repass" style="width:350px"  required>
             <br><input type="text" placeholder="Enter Address" name="saddress" maxlength="100" title="Less than 100 alphabets only" style="width:350px" required>
             <br><input type="text" placeholder="Enter City" name="scity" pattern="[A-Za-z ]{1,30}" title="Less than 30 alphabets only" style="width:350px" required>
             
@@ -688,8 +692,8 @@ class="close" title="Close Modal">&times;</span>
                 </h1>
                 <br>
                 <br>
-                <a href="#" style="margin-left:15%" class="btn btn-one color-change1" onclick="document.getElementById('id01').style.display='block';document.getElementById('id02').style.display='none'">Log IN</a>
-                <a href="#" style=""class="btn btn-two color-change1" onclick="document.getElementById('id02').style.display='block';document.getElementById('id01').style.display='none'">SignUp</a>
+                <a  style="margin-left:15%" class="btn btn-one color-change1" onclick="document.getElementById('id01').style.display='block';document.getElementById('id02').style.display='none'">Log IN</a>
+                <a  style=""class="btn btn-two color-change1" onclick="document.getElementById('id02').style.display='block';document.getElementById('id01').style.display='none'">SignUp</a>
             </div>
         </header>
     </div>
@@ -725,8 +729,8 @@ class="close" title="Close Modal">&times;</span>
         <a class="soc insta" href="https://instagram.com/" rel="nofollow noopener" alt="instagram" target="_blank"><img class="" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_48,h_48/icon-instagram_b7nubh" width="24" height="24" alt=""></a>
         <a class="soc twit" href="https://twitter.com/" rel="nofollow noopener" alt="twitter" target="_blank"><img class="" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_48,h_48/icon-twitter_gtq8dv" width="24" height="24" alt=""></a>
         </div>
-                    
-        <div class="corp">© 2018 Relish Inc.</div>
+        <hr>
+        <div class="corp"><b>© 2019 Relish Inc.</b></div>
             
                 
         </footer>

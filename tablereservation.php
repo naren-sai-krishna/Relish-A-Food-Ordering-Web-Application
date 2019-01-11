@@ -1,3 +1,25 @@
+<?php 
+require('php/db.php');
+
+if(isset($_POST['submit']))
+{
+	//print_r($_POST);exit;
+	$name=$_POST['name'];  //$_POST['<name of input tag>']
+	$date=$_POST['date'];
+	$time=$_POST['time'];
+	$no_of_table=$_POST['no_of_tables'];
+	$no_of_person=$_POST['no_of_person'];
+	$insert=mysqli_query($con,"INSERT INTO table_booking(username,date_of_booking,time_, no_tables, no_of_persons) VALUES('$name','$date','$time','$no_of_table','$no_of_person')");
+	if($insert)
+	{ ?>
+		<script> 
+		alert("Your table has been sucessfully booked!. Thank You");
+		</script>
+	<?php }
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +37,7 @@
 				font-weight:bold;
 				}
 		body{
-			background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0,0,0,0.2)), url('images/payment.jpeg');
+			background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)), url('images/i.jpg');
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;
@@ -46,7 +68,7 @@
 	padding: 15px;
 	overflow: hidden;
 	background-color: purple;
-	opacity:0.9;
+	opacity:1;
 	background-size: cover;
 	border-radius: 12px;
 	z-index: 20;
@@ -75,6 +97,7 @@
 	font-size: 42px;
 	margin: 0px;
 	color: #fff;
+	
 }
 
 .booking-form .form-group {
@@ -152,6 +175,7 @@ button:focus {
 	text-align: center;
 	pointer-events: none;
 	color: rgba(255, 255, 255, 0.5);
+	
 	font-size: 14px;
 	text-decoration: none;
 }
@@ -167,6 +191,7 @@ button:focus {
   position: absolute;
   opacity: 1;
   transition: 0.3s;
+  z-index:2;
   
 }
 .booking-form select.form-control+.select-arrow:after {
@@ -178,6 +203,8 @@ button:focus {
 
 .booking-form select.form-control option {
 	color: #000;
+	font-size:20px;
+	
 }
 
 .booking-form .form-label {
@@ -186,7 +213,8 @@ button:focus {
 	left: 25px;
 	opacity: 0;
 	color: #ff8846;
-	font-size: 11px;
+	
+	font-size: 13px;
 	text-decoration: none;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -195,10 +223,15 @@ button:focus {
 	line-height: 15px;
 	-webkit-transition: 0.2s all;
 	transition: 0.2s all;
+	opacity: 1;
+	top: 10px;
+	
+	
 }
 
 .booking-form .form-group.input-not-empty .form-control {
-	padding-top: 16px;
+	padding-top: 0px;
+	
 }
 
 .booking-form .form-group.input-not-empty .form-label {
@@ -228,6 +261,11 @@ button:focus {
 	
 }
 	</style>
+<?php
+
+
+
+ ?>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -264,16 +302,17 @@ button:focus {
 						<div class="form-header">
 							<h1>Make your Table reservation</h1>
 						</div>
-						<form>
+						<form method="post">
 							<div class="form-group">
-								<input class="form-control" type="text" placeholder="Enter Your Name" required>
-								<span class="form-label">Destination</span>
+								<input style="font-size:110%;padding-top:20px;" class="form-control" type="text" name="name" id="name"  required>
+								<span class="form-label">Name</span>
 							</div>
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input class="form-control" type="date" required>
-										<span class="form-label">Check In Date</span>
+										<input style="font-size:110%;padding-top:20px;" class="form-control" name="date" id="date" type="date" required>
+										<span class="form-label">Date</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										
 									</div>
 								
 								</div>
@@ -281,43 +320,46 @@ button:focus {
 							<div class="row">
 									<div class="col-md-6">
 										<div class="form-group">
-											<input type="time" class="form-control" required>
-											<span class="form-label">Check In Time</span>
+										<input type="time" style="font-size:110%;padding-top:20px;"name="time" id="time" class="form-control" required>
+											<span class="form-label">Time</span>
 										</div>
 									
 									</div>
 								</div>
 							<div class="row">
 								<div class="col-md-4">
-									<div class="form-group">
-										<select class="form-control" required>
+									<div class="form-group" >
+										<select style="font-size:110%;padding-top:20px;" class="form-control" name="no_of_tables" required>
 											<option value="" selected hidden>No of 	Tables</option>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+											<option value="8">8</option>
 										</select>
-										<span class="select-arrow"></span>
+										
 										<span class="form-label">Tables</span>
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="form-group">
-										<select class="form-control" required>
+										<select class="form-control" style="font-size:110%;padding-top:20px;" name="no_of_person" id="no_of_person" required>
 											<option value="" selected hidden>No of persons</option>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-											<option>5</option>
-											<option>6</option>
-											<option>7</option>
-											<option>8</option>
-
-
-
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+											<option value="8">8</option>
 
 										</select>
-										<span class="select-arrow"></span>
+										
+
 										<span class="form-label">Persons</span>
 									</div>
 								
@@ -325,7 +367,8 @@ button:focus {
 							</div>
 							
 							<div class="form-btn">
-								<button class="submit-btn">Book Now</button>
+								<input type="submit" name="submit" value="Book Now" class="submit-btn">
+							<!--	<button class="submit-btn">Book Now</button>-->
 							</div>
 						</form>
 					</div>
@@ -338,7 +381,7 @@ button:focus {
 	<script>
 		function goBack() {
             window.history.back();
-        } 
+        }  
 		$('.form-control').each(function () {
 			floatedLabel($(this));
 		});
@@ -357,6 +400,6 @@ button:focus {
 		}
 	</script>
 
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
 
 </html>

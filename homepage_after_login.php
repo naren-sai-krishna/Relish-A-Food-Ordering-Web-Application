@@ -692,7 +692,7 @@ class="close" title="Close Modal">&times;</span>
                             <li><a href="Italian.html" >Italian</a></li>
                             <li><a href="dessert.html" >Desserts</a></li>
                         </ul></li>
-                        <li><a href="table reservation.html">Table Reservation</a></li>
+                        <li><a href="tablereservation.php">Table Reservation</a></li>
                         <li><a href="#" onclick="document.getElementById('id03').style.display='block'">Rate Us</a></li>
                         <a href="php/logout.php" class="btn btn-one logout" >Logout</a>
                         
@@ -701,7 +701,7 @@ class="close" title="Close Modal">&times;</span>
                     <a href="#" class="mobile-icon" onclick="slideshow()"><i class="fa fa-bars"></i></a>
                 </div>
             </nav>
-            <label href="#" class="usname" style="border:2px solid">Welcome &nbsp; <?php echo $_SESSION['sfirstname'];?>&nbsp;!</label>
+            <label href="#" class="usname" style="border:2px solid tomato">Welcome &nbsp; <?php echo $_SESSION['sfirstname'];?>&nbsp;!</label>
             <div class="main-content-header">
                 <h1>WELCOME TO <span class="color-change">RELISH.</span><br>
                 HOUSE OF FOOD LOVERS.</h1>
@@ -743,8 +743,8 @@ class="close" title="Close Modal">&times;</span>
         <a class="soc insta" href="https://instagram.com/" rel="nofollow noopener" alt="instagram" target="_blank"><img class="" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_48,h_48/icon-instagram_b7nubh" width="24" height="24" alt=""></a>
         <a class="soc twit" href="https://twitter.com/" rel="nofollow noopener" alt="twitter" target="_blank"><img class="" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_48,h_48/icon-twitter_gtq8dv" width="24" height="24" alt=""></a>
         </div>
-                    
-        <div class="corp">© 2018 Relish Inc.</div>
+        <hr>
+        <div class="corp"><b>© 2019 Relish Inc.</b></div>
             
                 
         </footer>
